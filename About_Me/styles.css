@@ -1,0 +1,162 @@
+:root {
+    --border-and-buttons: #2489dd;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-color: whitesmoke;
+}
+
+#way {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    height: 10vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    margin: 0;
+    background: white;
+}
+
+#navbar p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    transform-origin: center center;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vw;
+    position: fixed;
+    top: 0;
+}
+
+#navbar p:hover {
+    transform: scale(1.15);
+    background-color: var(--border-and-buttons);
+    transition: all 0.4s ease;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: black; 
+}
+
+#welcome-section div{
+    height: 20rem;
+    width: 26rem;
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+#welcome-section div img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: -50%;
+    transform: scale(0.8);
+}
+
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 3vh auto;
+}
+
+#welcome-section:hover {
+    box-shadow: 0 0.1rem 1.5rem 0 var(--border-and-buttons);
+    transition: all 0.3s ease-in-out;
+}
+
+#welcome-section h1 {
+    transform: scale(1.5);
+}
+
+#welcome-section p {
+    transform: scale(1.5);
+    margin-top: -2%;
+}
+
+#profile-link {
+    text-decoration: none;
+    color: black; 
+}
+
+#project-section div p{
+
+    transform: scale(1.7);
+    background-color: var(--border-and-buttons);
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+#project-section div p:hover{
+    transform: scale(2);
+    transition: all 0.3s ease-in-out;
+}
+
+#project-section div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+#contact-section {
+    width: 95vw;
+    height: 20vh;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-section div {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#contact-section div p a {
+    text-decoration: none;
+    color: black; 
+
+}
+
+@media (max-width:720px) {
+    body{
+        font-size: 62.5%;
+    }
+}
+
+#contact-section div p {
+    font-size: 1.3rem;
+}
+
+
+
+
