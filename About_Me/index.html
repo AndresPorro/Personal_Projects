@@ -10,31 +10,75 @@
   <body>
     <header id="way">
       <nav id="navbar">
-        <p><a href="#project-section">About Me</a></p>
-        <p><a href="#profile-link">Wors</a></p>
-        <p><a href="#contact-section">Contact</a></p>
+        <p class="button_accion button_style"><a class="link_style" href="#welcome-section">About Me</a></p>
+        <p class="button_accion button_style"><a class="link_style" href="#project-section">Wors</a></p>
+        <p class="button_accion button_style"><a class="link_style" href="#contact-section">Contact</a></p>
       </nav>
     </header>
-    <section id="welcome-section">
-      <div>
-        <img src="/Foto-de-Perfil.jpg" alt="Profile Picture">
-      </div>
-      <h1>Andres Porro</h1>
-      <p>Software Engineer</p>
+
+    <section class="content_transition" id="welcome-section">
+
+        <img class="img_size_personal" src="Foto-de-Perfil.jpg" alt="Profile Picture">
+        <h1 class="text_style">Andres Porro</h1>
+        <p class="text_style"><strong>Software Engineer</strong></p>
+        <p class="text_style" id="Profecional_Perfil">
+          Soy una persona apasionada, con ganas de aprender <br> y mejorar mientras trabajo. <br>
+          Me adapto rápido y doy mi mejor esfuerzo por mejorar. <br>
+          Me gusta asumir responsabilidad y trabajar en equipo. <br>
+          Busco una oportunidad donde aportar mi conocimiento,<br> aprender mucho, y crecer.
+        </p>
+  
     </section>
+
     <section id="project-section">
-      <div>
-        <p class="project-tile"><a id="profile-link" href="https://github.com/AndresPorro/FreeCodeCamp_Certifications.git" target="_blank">Show GitHub</a></p>
+      <div class="project_grid">
+
+        <div class="project content_transition grid-bottom-right">
+          <h2 class="text_center">FreeCodeCamp,<br> <i>Certification Project-1</i>:</h2>
+          <img class="img_size" src="Foto-de-Perfil.jpg" alt="Pre-imagen del proyecto">
+        </div>
+
+        <div class="project content_transition grid-bottom-left">
+          <h2 class="text_center">FreeCodeCamp,<br> <i>Certification Project-2</i></h2>
+          <img class="img_size" src="Foto-de-Perfil.jpg" alt="Pre-imagen del proyecto">
+        </div>
+
+        <div class="project content_transition grid-top-right">
+          <h2 class="text_center">FreeCodeCamp,<br> <i>Certification Project-3</i>:</h2>
+          <img class="img_size" src="Foto-de-Perfil.jpg" alt="Pre-imagen del proyecto">
+        </div>
+        
+        <div class="project content_transition grid-top-left">
+          <h2 class="text_center">FreeCodeCamp,<br> <i>Certification Project-4</i>:</h2>
+          <img class="img_size" src="Foto-de-Perfil.jpg" alt="Pre-imagen del proyecto">
+        </div>
+
+      </div>
+
+      <div id="button_location_project">
+        <p class="button_accion button_style_project"><a class="link_style" href="https://github.com/AndresPorro/FreeCodeCamp_Certifications.git" target="_blank">Show GitHub</a></p>
       </div>
     </section>
+
     <section id="contact-section">
-      <div>
-        <p type="email" class="email">porroandres21@gmail.com</p>
-        <img href="/linkedin.jpg" aria-hidden="true">
-        <p><a href="https://linkedin.com/in/andrés-porro-cora">Linkedin</a></p>
-        <img href="/github.png" aria-hidden="true">
-        <p><a href="https://github.com/AndresPorro">GitHub</a></p>
-      </div>
+
+        <div>
+          <h3 class="text_style">Contact: </h3>
+            <p  class="text_style">porroandres21@gmail.com</p>
+            <p  class="text_style">+598 95 083 507</p>  
+        </div>
+
+        <div>
+          <h3 class="text_style">Social Media: </h3>
+          <div>
+              <img class="logo_size_location" src="Linkedin.png" alt="">
+              <p class="social_link text_center"><a  class="link_style social_link" href="https://linkedin.com/in/andrés-porro-cora">Linkedin</a></p>
+              <img class="logo_size_location" src="GitHub.png" alt="">
+              <p class="social_link text_center"><a  class="link_style social_link" href="https://github.com/AndresPorro">GitHub</a></p>
+          </div>
+        </div>
+
     </section>
+
   </body>
 </html>

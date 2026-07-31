@@ -1,81 +1,49 @@
 :root {
     --border-and-buttons: #2489dd;
+    --body-background: whitesmoke;
+    --way-background: white;
+    --link-color: black;
+    --project-grid: rgb(134, 132, 132);
+    --width: 50rem;
+    --height: 50rem;
 }
 
-body{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    border-color: whitesmoke;
+    border-color: var(--body-background);
 }
 
+/* NAVBAR CONFIG */
 #way {
-    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    width: 100%;
-    height: 10vh !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0 0 10px 10px;
-    margin: 0;
-    background: white;
-}
-
-#navbar p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    padding: 0.5rem;
-    border-radius: 0.3rem;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    transform-origin: center center;
+    z-index: 999;
+    background-color: var(--way-background);
+    height: 5rem;
+    width: 60rem;
 }
 
 #navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 5vw;
-    position: fixed;
-    top: 0;
+    gap: 5rem;
 }
+/* NAVBAR CONFIG */
 
-#navbar p:hover {
-    transform: scale(1.15);
-    background-color: var(--border-and-buttons);
-    transition: all 0.4s ease;
-}
-
-#navbar a {
-  text-decoration: none;
-  color: black; 
-}
-
-#welcome-section div{
-    height: 20rem;
-    width: 26rem;
-    overflow: hidden;
-    border-radius: 10%;
-}
-
-#welcome-section div img{
-    position: relative;
-    width: 100%;
-    height: auto;
-    top: -50%;
-    transform: scale(0.8);
-}
+/* Welcome Config */
 
 #welcome-section {
     display: flex;
@@ -83,80 +51,164 @@ body{
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    margin: 3vh auto;
-}
-
-#welcome-section:hover {
-    box-shadow: 0 0.1rem 1.5rem 0 var(--border-and-buttons);
-    transition: all 0.3s ease-in-out;
-}
-
-#welcome-section h1 {
-    transform: scale(1.5);
-}
-
-#welcome-section p {
-    transform: scale(1.5);
-    margin-top: -2%;
-}
-
-#profile-link {
-    text-decoration: none;
-    color: black; 
-}
-
-#project-section div p{
-
-    transform: scale(1.7);
-    background-color: var(--border-and-buttons);
-    padding: 0.5rem;
-    border-radius: 0.3rem;
-}
-
-#project-section div p:hover{
-    transform: scale(2);
-    transition: all 0.3s ease-in-out;
-}
-
-#project-section div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
+    margin: 1rem;
+    margin-top: 8rem;
+    padding: 2rem;
+    width: var(--width);
     height: auto;
 }
 
-#contact-section {
-    width: 95vw;
-    height: 20vh;
-    margin: 1rem;
+
+/* Welcome Config */
+
+/* Projects Config*/
+.project_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    width: var(--width);
+    height: var(--height);
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: flex-start;
+}
+
+.grid-top-right {
+
+    box-shadow: 0.4rem -0.4rem 15px 1px var(--project-grid);
+}
+
+.grid-top-left {
+
+    box-shadow: -0.4rem -0.4rem 15px 1px var(--project-grid);
+}
+
+.grid-bottom-right {
+
+    box-shadow: 0.4rem 0.4rem 15px 1px var(--project-grid);
+}
+
+.grid-bottom-left {
+    box-shadow: -0.4rem 0.4rem 15px 1px var(--project-grid);
+
+}
+
+#button_location_project {
+    margin: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/* Projects Config*/
 
-#contact-section div {
+/* Contact Config*/
+
+#contact-section {
+    width: var(--width);
+    height: auto;
     display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 2rem;
 }
 
-#contact-section div p a {
-    text-decoration: none;
-    color: black; 
-
+#contact-section div h3{
+    margin: 0 !important;
 }
 
+/* Contact Config*/
+
+/* Media Config*/
 @media (max-width:720px) {
     body{
         font-size: 62.5%;
     }
 }
+/* Media Config*/
 
-#contact-section div p {
-    font-size: 1.3rem;
+/* Transform Config*/
+.content_transition:hover {
+    box-shadow: 0 0.1rem 1.5rem 0 var(--border-and-buttons);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+/* Transform Config*/
+
+/* Style and sizing Config */
+.logo_size_location{
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    left: -1.5rem;
+    top: 1.4rem;
 }
 
 
 
+.text_style {
+    transform: scale(1.4);
+    margin: 1rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+.img_size {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1rem;
+}
+
+.img_size_personal {
+    width: 30rem;
+    height: auto;
+}
+.text_center {
+    margin: 1rem;
+    text-align: center;
+}
+/* Style and sizing Config */
+
+/* Button Config */
+.button_style {
+    font-size: 3rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    padding: 0.5rem;
+}
+
+.button_style_project {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--border-and-buttons);
+}
+
+.button_accion:hover {
+    transform: scale(1.1);
+    background-color: var(--border-and-buttons);
+    transition: all 0.4s ease-in-out;
+}
+
+.link_style {
+  text-decoration: none;
+  color: var(--link-color); 
+}
+
+.social_link {
+    color: #3366CC !important;
+    margin: -0.8rem !important;
+    padding: 0 !important;
+    font-size: 1.5rem;
+}
+
+.social_link:hover {
+    transform: scale(1.1) !important;
+    transition: all 0.3s ease-in-out !important;
+}
+/* Button Config */
